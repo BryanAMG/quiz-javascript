@@ -13,7 +13,7 @@ interface State {
   reset: () => void
 }
 
-const API_URL = import.meta.env.PROD ? 'https://quiz-javascript.surge.sh/' : 'http://localhost:5173/'
+const API_URL = import.meta.env.PROD ? 'https://javascript-quiz-zustand.netlify.app/' : 'http://localhost:5173/'
 
 export const useQuestionsStore = create<State>()(persist((set, get) => ({
   questions: [],
