@@ -1,6 +1,6 @@
 import { useQuestionsStore } from '../store/questions'
 
-export const useQuestionsData = () => {
+export const useQuestionsResults = () => {
   const questions = useQuestionsStore(state => state.questions)
 
   let correct = 0
