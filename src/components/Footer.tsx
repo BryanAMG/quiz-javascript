@@ -3,13 +3,11 @@ import { useQuestionsStore } from '../store/questions'
 import CheckIcon from '@mui/icons-material/Check'
 import ClearIcon from '@mui/icons-material/Clear'
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark'
-import { getResults } from '../utils/questions'
+import { useQuestionsData } from '../hook/useQuestionsResults'
 
 export const Footer = () => {
   const reset = useQuestionsStore(state => state.reset)
-  const questions = useQuestionsStore(state => state.questions)
-
-  const { correct, incorrect, unanswered } = getResults(questions)
+  const { correct, incorrect, unanswered } = useQuestionsData()
   return (
     <footer style={{ marginTop: '15px' }}>
       <Stack direction='row' justifyContent='center' gap={2}>
